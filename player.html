@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正在播放</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/player.css">
+	<link rel="icon" href="img/logo_01.png">
+	<script type="text/javascript" src="js/jquery_1.11.3.js"></script>
+</head>
+<body>
+	<audio id="audio" oncanplay="abcd()" loop="loop" src="audio/xzq_aimei.mp3"></audio>
+	<div class="player_bg">
+		<div class="opa_bg"></div>
+		<div class="blur_bg" id="blur_bg"></div>
+	</div>
+	<div class="player_main">
+		<div class="player_nav">
+			<a href="index.html"><img src="img/player_logo.png" class="player_logo"></a>
+			<div class="nav_right">
+				<div class="player_head"></div>
+				<span>console.</span>
+				<span>设置</span>
+			</div>
+		</div>
+		<ul class="player_ul">
+			<li>
+				<span class="bg_one"></span>
+				<span>收藏</span>
+			</li>
+			<li>
+				<span class="bg_two"></span>
+				<span>添加到</span>
+			</li>
+			<li>
+				<span class="bg_thr"></span>
+				<span>下载</span>
+			</li>
+			<li>
+				<span class="bg_fou"></span>
+				<span>删除</span>
+			</li>
+			<li>
+				<span class="bg_fiv"></span>
+				<span>清空列表</span>
+			</li>
+		</ul>
+		<ul class="songs_list">
+			<li>
+				<div class="songs">
+					<p>歌曲</p>
+				</div>
+				<div class="singer">歌手</div>
+				<div class="times">时长</div>
+			</li>
+			<li>
+				<div class="songs">
+					<p>暧昧</p>
+					<div class="operate">
+						<div class="play"></div>
+						<div class="add"></div>
+						<div class="down"></div>
+						<div class="relay"></div>
+					</div>
+				</div>
+				<div class="singer ">薛之谦</div>
+				<div class="times ">
+					<div class="timeshidden">4:21</div>
+					<div class="delopen"></div>
+				</div>
+			</li>
+			<li>
+				<div class="songs">
+					<p>理想</p>
+					<div class="operate">
+						<div class="play"></div>
+						<div class="add"></div>
+						<div class="down"></div>
+						<div class="relay"></div>
+					</div>
+				</div>
+				<div class="singer ">赵雷</div>
+				<div class="times ">
+					<div class="timeshidden">4:21</div>
+					<div class="delopen"></div>
+				</div>
+			</li>
+			<li>
+				<div class="songs">
+					<p>像我这样的人</p>
+					<div class="operate">
+						<div class="play"></div>
+						<div class="add"></div>
+						<div class="down"></div>
+						<div class="relay"></div>
+					</div>
+				</div>
+				<div class="singer ">毛不易</div>
+				<div class="times ">
+					<div class="timeshidden">4:21</div>
+					<div class="delopen"></div>
+				</div>
+			</li>
+			<li>
+				<div class="songs">
+					<p>消愁</p>
+					<div class="operate">
+						<div class="play"></div>
+						<div class="add"></div>
+						<div class="down"></div>
+						<div class="relay"></div>
+					</div>
+				</div>
+				<div class="singer ">毛不易</div>
+				<div class="times ">
+					<div class="timeshidden">4:21</div>
+					<div class="delopen"></div>
+				</div>
+			</li>
+		</ul>
+		<div class="songsword">
+			<div class="lyrics">
+				<div id="songs_pic" class="songs_pic"><img src="img/playerbg.jpg" id="songBg"></div>
+				<div>歌曲名：<span id="songsname">暧昧</span></div>
+				<div>歌手名：<sapn id="singer">薛之谦</sapn></div>
+				<div>专辑名：<span id="songsteam">暧昧</span></div>
+				<div class="scroll">
+					<div class="scroll_box pause" id="scroll_box">
+						<p>暧昧 - 薛之谦</p>
+						<p>词：薛之谦</p>
+						<p>曲：薛之谦</p>
+						<p>反正现在的感情 都暧昧</p>
+						<p>你大可不必为难 找般配</p>
+						<p>付出过的人排队 谈体会</p>
+						<p>趁年轻别害怕一个人睡</p>
+						<p>可能是现在感情 太昂贵</p>
+						<p>让付出真心的人 好狼狈</p>
+						<p>还不如听首情歌 的机会</p>
+						<p>忘了谁</p>
+						<p>感情像牛奶一杯</p>
+						<p>越甜越让人生畏</p>
+						<p>都早有些防备</p>
+						<p>润色前的原味</p>
+						<p>所以人们都拿起咖啡</p>
+						<p>把试探放在两人位</p>
+						<p>距离感一对</p>
+						<p>就不必再赤裸相对</p>
+						<p>反正现在的感情 都暧昧</p>
+						<p>你大可不必为难 找般配</p>
+						<p>付出过的人排队 谈体会</p>
+						<p>弃之可惜 食而无味</p>
+						<p>可能是现在感情 太珍贵</p>
+						<p>让付出真心的人 好疲惫</p>
+						<p>谁不曾用过卑微的词汇</p>
+						<p>想留住谁</p>
+						<p>还贪恋着衣衫昂贵</p>
+						<p>却输给了廉价香水</p>
+						<p>他先诱你入位</p>
+						<p>还刻意放低了分贝</p>
+						<p>可感情越爱越妩媚</p>
+						<p>像烂掉的苹果一堆</p>
+						<p>连基因都不对</p>
+						<p>还在意什么鱼腥味</p>
+						<p>反正现在的感情 都暧昧</p>
+						<p>你大可不必为难 找般配</p>
+						<p>何必给自己沉迷 的机会</p>
+						<p>不如用误会来结尾</p>
+						<p>反正现在的我们 算暧昧</p>
+						<p>我愿意给的感情 请浪费</p>
+						<p>反正流过的眼泪 难收回</p>
+						<p>就别再安慰</p>
+						<p>看你入眠的侧脸 有多美</p>
+						<p>和你丢下的一切 好匹配</p>
+						<p>我还以为我能 多狼狈</p>
+						<p>我自以为</p>
+						<p>制作人：郑伟</p>
+						<p>编曲：薛之谦/郑伟</p>
+						<p>混音：郑伟</p>
+						<p>大提琴：周润青</p>
+						<p>女声：孟楠</p>
+						<p>合音：薛之谦/张石狄</p>
+						<p>录音：莫家伟</p>
+						<p>母带：Chris Gehringer</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="playsongs">
+			<div class="play_btn">
+				<div id="up" class="up"></div>
+				<div id="played" class="played"></div>
+				<div id="playdown" class="playdown"></div>
+			</div>
+			<div  class="timesline">
+				<div class="songsnameandsinger" id="songname">暧昧-薛之谦</div>
+				<div class="songstime">0:51/5:21</div>
+				<div class="schedule" id="schedule">
+					<div class="whiteline pause" id="whiteline"></div>
+				</div>
+				<img src="img/player_18.png" class="actionpoint pause" id="actionpoint">
+			</div>
+			<div class="switchs">
+				<div class="whilebtn" id="whilebtn"></div>
+				<div class="loves" id="loves"></div>
+				<div class="download" id="download"></div>
+				<div class="simp" id="simp"></div>
+				<div class="voice" id="voice">
+					<div class="voiceline"></div>
+					<div class="whitevoiceline"></div>
+					<img src="img/player_18.png" class="voice_point" id="voice_point">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/player.js"></script>
+</script>
+</html>

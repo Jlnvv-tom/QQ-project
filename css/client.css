@@ -1,0 +1,238 @@
+/*客户端样式*/
+/*头部导航栏*/
+#client-nav{width:100%;height:80px;background: rgba(0,0,0,0.3);float: left;position:relative; z-index:100;}
+#client-nav p{float: left;font-size:20px;line-height: 80px;margin-left: 30px;}
+#client-nav p a{color: #fff}
+#client-nav p a.tings{color: #31C27C}
+#client-nav .logo {float: left;line-height: 110px; width:170px;margin-left: 40px;margin-right: 40px;}
+.client-nav{width:26%;float:right;margin-right: 100px;}
+.client-nav li{width:33%;display: inline-block;float:left;}
+.client-nav li a{font-size: 20px;color: #fff;line-height: 80px;}
+/*版本类型部分*/
+#client-scroll{width:100%;height: 650px;}
+.open{display: block;}
+.hidden{display: none;}
+.mac-type,.ip-type,.andr-type{display: none;}
+#pc-type,#mac-type,#ip-type,#andr-type{width: 100%;height: 100%;}
+#pc-type{background:url(../img/banner_pc.jpg) no-repeat center; background-size: 100% 100%;position: relative;}
+#changetype{position: absolute;width: 100%;height: 150px;top:450px;border-top: 1px solid #999;z-index: 120;}
+#changetype li{width: 24.5%;height:150px;display: inline-block;}
+#changetype li a{display: block;width: 110px;height: 150px;margin: 0 auto;padding-top: 50px;}
+.whiteline{border-top: 2px #fff solid;}
+#changetype li a:first-child{position:relative;top: -2px}
+.imgopacity{opacity: 0.5;}
+.imgopacity:hover{opacity: 1;}
+/*pc端样式*/
+.watch{position:absolute;left: 100px;top: 10px;}
+.guide{position:absolute;left: 199px;top: 222px;
+-moz-transform:rotate(-40deg);-moz-transform-origin: 85% 50%;
+-o-transform:rotate(-40deg);-o-transform-origin: 85% 50%;
+-ms-transform:rotate(-40deg);-ms-transform-origin: 85% 50%;
+-webkit-transform:rotate(-40deg);-webkit-transform-origin: 85% 50%;
+-moz-animation: guiderotate 1s linear 200ms;
+-o-animation: guiderotate 1s linear 200ms;
+-ms-animation: guiderotate 1s linear 200ms;
+-webkit-animation: guiderotate 1s linear 200ms;
+-moz-animation-fill-mode:forwards;
+-o-animation-fill-mode:forwards;
+-ms-animation-fill-mode:forwards;
+-webkit-animation-fill-mode:forwards;
+}
+.textimg1{position: absolute;left: 610px;top: 114px;z-index: 4}
+.textimg2{position: absolute;left: 610px;top: 273px;z-index: 4}
+.downimg{position: absolute;left: 610px;top: 346px;z-index: 4}
+.bottomimg{position:absolute;z-index: 120;text-align: center;left: 50%;bottom:0;
+-moz-animation: downward 2s linear  infinite;
+-o-animation: downward 2s linear  infinite;
+-ms-animation: downward 2s linear  infinite;
+-webkit-animation: downward 2s linear  infinite;}
+.numbox{width: 80px;height: 50px;position:absolute;top: 321px;left: 305px;}
+.dig_1,.dig_2{width: 39px;height:50px; float: left;background: url(../img/watch_numb_01.png) no-repeat;}
+.dig_1{-moz-animation:tenDigAction 1s linear 200ms;-moz-animation-fill-mode:forwards;
+	   -ms-animation:tenDigAction 1s linear 200ms;-ms-animation-fill-mode:forwards;
+	   -webkit-animation:tenDigAction 1s linear 200ms;-webkit-animation-fill-mode:forwards;
+	   -o-animation:tenDigAction 1s linear 200ms;-o-animation-fill-mode:forwards;
+		}
+.dig_2{-moz-animation:oneDigAction 1s linear 200ms;-moz-animation-fill-mode:forwards;
+	   -o-animation:oneDigAction 1s linear 200ms;-webkit-animation-fill-mode:forwards;
+	   -ms-animation:oneDigAction 1s linear 200ms;-ms-animation-fill-mode:forwards;
+	   -webkit-animation:oneDigAction 1s linear 200ms;-o-animation-fill-mode:forwards;
+}
+/*创建向下箭头的动画函数*/
+@-moz-keyframes downward{
+	0%,25%{bottom: 15px;opacity:0.7;}
+	25%,50%{bottom:10px;opacity:0.3;}
+	50%,75%{bottom: 5px;opacity: 0;}
+	75%,100%{bottom: 0px;opacity: 1;}
+}
+@-o-keyframes downward{
+	0%,25%{bottom: 15px;opacity:0.7;}
+	25%,50%{bottom:10px;opacity:0.3;}
+	50%,75%{bottom: 5px;opacity: 0;}
+	75%,100%{bottom: 0px;opacity: 1;}
+}
+@-webkit-keyframes downward{
+	0%,25%{bottom: 15px;opacity:0.7;}
+	25%,50%{bottom:10px;opacity:0.3;}
+	50%,75%{bottom: 5px;opacity: 0;
+	}
+	75%,100%{bottom: 0px;opacity: 1;}
+}
+/*创建指针旋转的动画函数*/
+@-moz-keyframes guiderotate{
+	0%,25%{-moz-transform:rotate(23deg);-o-transform:rotate(23deg);-ms-transform:rotate(23deg);-webkit-transform:rotate(23deg);}
+	25%,50%{-moz-transform:rotate(86deg);-o-transform:rotate(86deg);-ms-transform:rotate(86deg);-webkit-transform:rotate(86deg);}
+	50%,75%{-moz-transform:rotate(149deg);-o-transform:rotate(149deg);-ms-transform:rotate(149deg);-webkit-transform:rotate(149deg);}
+	75%,100%{-moz-transform:rotate(215deg);-o-transform:rotate(215deg);-ms-transform:rotate(215deg);-webkit-transform:rotate(215deg);}
+}
+@-o-keyframes guiderotate{
+	0%,25%{-moz-transform:rotate(23deg);-o-transform:rotate(23deg);-ms-transform:rotate(23deg);-webkit-transform:rotate(23deg);}
+	25%,50%{-moz-transform:rotate(86deg);-o-transform:rotate(86deg);-ms-transform:rotate(86deg);-webkit-transform:rotate(86deg);}
+	50%,75%{-moz-transform:rotate(149deg);-o-transform:rotate(149deg);-ms-transform:rotate(149deg);-webkit-transform:rotate(149deg);}
+	75%,100%{-moz-transform:rotate(215deg);-o-transform:rotate(215deg);-ms-transform:rotate(215deg);-webkit-transform:rotate(215deg);}
+}
+@-webkit-keyframes guiderotate{
+	0%,25%{-moz-transform:rotate(23deg);-o-transform:rotate(23deg);-ms-transform:rotate(23deg);-webkit-transform:rotate(23deg);}
+	25%,50%{-moz-transform:rotate(86deg);-o-transform:rotate(86deg);-ms-transform:rotate(86deg);-webkit-transform:rotate(86deg);}
+	50%,75%{-moz-transform:rotate(149deg);-o-transform:rotate(149deg);-ms-transform:rotate(149deg);-webkit-transform:rotate(149deg);}
+	75%,100%{-moz-transform:rotate(215deg);-o-transform:rotate(215deg);-ms-transform:rotate(215deg);-webkit-transform:rotate(215deg);}
+}
+/*创建数字十位数的动画*/
+@-moz-keyframes tenDigAction{
+	0%,16%{background: url(../img/watch_numb_02.png) no-repeat;}
+	16%,33%{background: url(../img/watch_numb_03.png) no-repeat;}
+	33%,49%{background: url(../img/watch_numb_04.png) no-repeat;}
+	49%,65%{background: url(../img/watch_numb_05.png) no-repeat;}
+	65%,83%{background: url(../img/watch_numb_06.png) no-repeat;}
+	83%,100%{background: url(../img/watch_numb_07.png) no-repeat;}
+}
+@-o-keyframes tenDigAction{
+	0%,16%{background: url(../img/watch_numb_02.png) no-repeat;}
+	16%,33%{background: url(../img/watch_numb_03.png) no-repeat;}
+	33%,49%{background: url(../img/watch_numb_04.png) no-repeat;}
+	49%,65%{background: url(../img/watch_numb_05.png) no-repeat;}
+	65%,83%{background: url(../img/watch_numb_06.png) no-repeat;}
+	83%,100%{background: url(../img/watch_numb_07.png) no-repeat;}
+}
+@-webkit-keyframes tenDigAction{
+	0%,16%{background: url(../img/watch_numb_02.png) no-repeat;}
+	16%,33%{background: url(../img/watch_numb_03.png) no-repeat;}
+	33%,49%{background: url(../img/watch_numb_04.png) no-repeat;}
+	49%,65%{background: url(../img/watch_numb_05.png) no-repeat;}
+	65%,83%{background: url(../img/watch_numb_06.png) no-repeat;}
+	83%,100%{background: url(../img/watch_numb_07.png) no-repeat;}
+}
+@-moz-keyframes oneDigAction{
+	0%,10%{background: url(../img/watch_numb_02.png) no-repeat;}
+	10%,20%{background: url(../img/watch_numb_03.png) no-repeat;}
+	30%,40%{background: url(../img/watch_numb_04.png) no-repeat;}
+	40%,50%{background: url(../img/watch_numb_05.png) no-repeat;}
+	50%,60%{background: url(../img/watch_numb_06.png) no-repeat;}
+	60%,70%{background: url(../img/watch_numb_07.png) no-repeat;}
+	70%,80%{background: url(../img/watch_numb_08.png) no-repeat;}
+	80%,90%{background: url(../img/watch_numb_09.png) no-repeat;}
+	90%,100%{background: url(../img/watch_numb_01.png) no-repeat;}
+}
+@-o-keyframes oneDigAction{
+	0%,10%{background: url(../img/watch_numb_02.png) no-repeat;}
+	10%,20%{background: url(../img/watch_numb_03.png) no-repeat;}
+	30%,40%{background: url(../img/watch_numb_04.png) no-repeat;}
+	40%,50%{background: url(../img/watch_numb_05.png) no-repeat;}
+	50%,60%{background: url(../img/watch_numb_06.png) no-repeat;}
+	60%,70%{background: url(../img/watch_numb_07.png) no-repeat;}
+	70%,80%{background: url(../img/watch_numb_08.png) no-repeat;}
+	80%,90%{background: url(../img/watch_numb_09.png) no-repeat;}
+	90%,100%{background: url(../img/watch_numb_01.png) no-repeat;}
+}
+@-webkit-keyframes oneDigAction{
+	0%,10%{background: url(../img/watch_numb_02.png) no-repeat;}
+	10%,20%{background: url(../img/watch_numb_03.png) no-repeat;}
+	30%,40%{background: url(../img/watch_numb_04.png) no-repeat;}
+	40%,50%{background: url(../img/watch_numb_05.png) no-repeat;}
+	50%,60%{background: url(../img/watch_numb_06.png) no-repeat;}
+	60%,70%{background: url(../img/watch_numb_07.png) no-repeat;}
+	70%,80%{background: url(../img/watch_numb_08.png) no-repeat;}
+	80%,90%{background: url(../img/watch_numb_09.png) no-repeat;}
+	90%,100%{background: url(../img/watch_numb_01.png) no-repeat;}
+}
+/*iphone样式*/
+#ip-type{position: relative;}
+#ip-play1,#ip-play2,#ip-play3{width: 100%;height:100%;position: absolute;}
+#ip-play1{background: url(../img/iphone_play_1.jpg) center no-repeat;background-size:100% 100%; }
+#ip-play2{background: url(../img/iphone_play_2.jpg) center no-repeat;background-size:100% 100%; }
+#ip-play3{background: url(../img/iphone_play_3.jpg) center no-repeat;background-size:100% 100%; }
+.action{-moz-animation:transy 1s linear}
+@-moz-keyframes transy{0%{opacity: 0}10%{opacity: 0.1}20%{opacity: 0.2}30%{opacity: 0.3}40%{opacity: 0.4}50%{opacity: 0.5}60%{opacity: 0.6}70%{opacity: 0.7}80%{opacity: 0.8}90%{opacity: 0.9}100%{opacity:1}}
+@-o-keyframes transy{0%{opacity: 0}10%{opacity: 0.1}20%{opacity: 0.2}30%{opacity: 0.3}40%{opacity: 0.4}50%{opacity: 0.5}60%{opacity: 0.6}70%{opacity: 0.7}80%{opacity: 0.8}90%{opacity: 0.9}100%{opacity:1}}
+@-webkit-keyframes transy{0%{opacity: 0}10%{opacity: 0.1}20%{opacity: 0.2}30%{opacity: 0.3}40%{opacity: 0.4}50%{opacity: 0.5}60%{opacity: 0.6}70%{opacity: 0.7}80%{opacity: 0.8}90%{opacity: 0.9}100%{opacity:1}}
+/*Mac样式*/
+#mac-type{background:url(../img/banner_mac.jpg) no-repeat center; background-size: 100% 100%;position: relative;}
+/*android样式*/
+#andr-type{background:url(../img/banner_android.jpg) no-repeat center; background-size: 100% 100%;position: relative;}
+
+/*歌手部分*/
+#singers{width:100%;height:873px;background: black;position:relative;}
+/*.singersbottom{position:relative;z-index: 200;left: 0px;bottom:50px;text-align: center;}*/
+.singertext1,.singertext2{z-index: 100;position: absolute;}
+.singertext1{width: 564px;height: 75px;top: 350px;}
+.singertext2{width: 348px;height: 71px;top:450px;}
+.oneline,.twoline,.thrline,.fouline,.fivline{float: left;width:100%;}
+.twoline,.thrline,.fouline{height: 211px;}
+.oneline,.fivline{height: 120px;}
+.oneline img,.twoline img,.thrline img,.fouline img,.fivline img{float: left;display:block; width:20%;}
+/*#singer .bottomimg{position: relative;top: -30px;}*/
+/*社交互动部分*/
+#interaction{width: 100%;height: 850px;background:url(../img/bg_lyric.jpg) no-repeat center;background-size: 100% 100%;position:relative;z-index: 110; }
+.textimg3,.textimg4,.phonebox{position:absolute;}
+.textimg3{top: 270px;left: 113px}
+.textimg4{top: 460px;left: 113px}
+.phonebox{top: 0px;right: 0px}
+#phonediv{width:340px;height:604px;position: absolute;right: 139px;top:136px;transform:rotate(8deg);}
+#phoneimg1{position:absolute;width:100%;height:100%;background: url(../img/lyric_phone1.jpg) no-repeat center;background-size:100% 100%; }
+#phoneimg2{position:absolute;width:100%;height:100%;background: url(../img/lyric_phone2.jpg) no-repeat center;background-size:100% 100%; }
+/*like部分*/
+#likebox{width: 100%;height: 850px;background: url(../img/bg_like.jpg) no-repeat center;background-size: 100% 100%;position: relative;z-index: 110;}
+.likephonebox,.textimg5,.textimg6{position: absolute;}
+.likephonebox{left: 60px;top: 0px;}
+.textimg5{right: 60px;top: 230px;}
+.textimg6{right: 126px;top: 400px;}
+#scrolldiv{width:315px;height: 420px;transform:rotate(-5.7deg); position: absolute;top: 181px;left:120px;overflow: hidden; }
+.actiondiv{width: 100%;height: 648px;background: url(../img/like_phone.jpg) no-repeat center;background-size: 100% 100%;position: relative;top: 0px;}
+.actiondiv{-moz-animation:scrollTop 3s linear 200ms;-moz-animation-fill-mode:forwards;
+-o-animation:scrollTop 3s linear 200ms;-moz-animation-fill-mode:forwards;
+-ms-animation:scrollTop 3s linear 200ms;-moz-animation-fill-mode:forwards;
+-webkit-animation:scrollTop 3s linear 200ms;-moz-animation-fill-mode:forwards;}
+@-moz-keyframes scrollTop{
+	0%,25%{top:-58px;}
+	25%,50%{top:-115px;}
+	50%,75%{top:-172px;}
+	75%,100%{top:-230px;}
+}
+@-webkit-keyframes scrollTop{
+	0%,25%{top:-58px;}
+	25%,50%{top:-115px;}
+	50%,75%{top:-172px;}
+	75%,100%{top:-230px;}
+}
+@-o-keyframes scrollTop{
+	0%,25%{top:-58px;}
+	25%,50%{top:-115px;}
+	50%,75%{top:-172px;}
+	75%,100%{top:-230px;}
+}
+
+#macbox{width: 100%;height: 850px;background: url(../img/bg_synchro.jpg) no-repeat center;background-size: 100% 100%;position: relative;}
+#macbox img{position:absolute;}
+.syn1{top: 330px;left: 50px;}
+.syn2{top: 170px;left:50px;}
+.synphone{top: 410px;left: 180px;}
+.mac1{top: 0px;right: 0px;}
+.mac2{top: 405px;right: 0px;}
+#foot{width: 100%;height: 80px;background:rgba(0,0,0,0.3);position: absolute;bottom: 0px;}
+#foot p{color:#fff;font-size: 13px;line-height: 33px;}
+
+
+
+
+
+

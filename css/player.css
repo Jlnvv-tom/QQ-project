@@ -1,0 +1,135 @@
+/*音乐播放器样式*/
+/*模糊背景样式*/
+body{background: rgb(66, 34, 129);overflow: hidden;position: relative;}
+#blur_bg{width: 100%;height:100%;background-size:cover;filter: blur(65px);-moz-filter: blur(65px);background-position: 50%;position: absolute;z-index: 1;background: url(../img/playerbg.jpg) no-repeat;}
+.blur_bg{background: url(../img/playerbg.jpg) no-repeat;}
+.opa_bg{width: 100%;height:100%;background: rgba(0,0,0,0.35);position: absolute;z-index: 2}
+/*头部*/
+/*.player_bg{width:100%;height:100%;}*/
+.player_main{position: relative;z-index: 10;width: 100%;height:100%;}
+.player_nav{width: 100%;height: 50px;padding-top: 20px;}
+.player_logo{float:left;position:relative;left: 50px;opacity:0.5;}
+.player_logo:hover{opacity: 1;}
+.nav_right{width: 19%;float: right;height: 50px; color:#ccc}
+.player_head{display:inline-block;width: 30px;height: 30px;background:url(../img/g.jpg) center no-repeat;background-size:100% 100%;border-radius:50%;}
+.nav_right span{position: relative;top: -9px;font-size: 14px;}
+.nav_right span:hover{color: #fff}
+/*操作歌曲样式*/
+.player_ul{width: 60%;height: 50px;}
+.player_ul li{width: 16%;height: 40px;display: inline-block;border-radius: 1px;font-size: 14px;color: #999;line-height: 44px;border: 1px solid #999}
+.bg_one,.bg_two,.bg_thr,.bg_fou,.bg_fiv{display:inline-block;width: 17px;height: 17px;position: relative;top: 5px;background-size: 100% 100%;opacity: 0.5}
+.bg_one{background: url(../img/icon_sprite_26.png) center no-repeat;}
+.bg_two{background: url(../img/icon_sprite_30.png) center no-repeat;}
+.bg_thr{background: url(../img/icon_sprite_76.png) center no-repeat;}
+.bg_fou{background: url(../img/icon_sprite_34.png) center no-repeat;}
+.bg_fiv{background: url(../img/icon_sprite_03.png) center no-repeat;}
+.player_ul li:hover{border-color: #fff;}
+.player_ul li:hover span{color: #fff;}
+.player_ul li:hover .bg_one{opacity: 1;}
+.player_ul li:hover .bg_two{opacity: 1;}
+.player_ul li:hover .bg_thr{opacity: 1;}
+.player_ul li:hover .bg_fou{opacity: 1;}
+.player_ul li:hover .bg_fiv{opacity: 1;}
+/*歌曲列表*/
+.songs_list{width: 70%;height:300px;float: left;}
+.songs_list li{width: 100%;height: 50px;line-height: 45px;}
+.songs,.singer,.times{float: left;color: #fff;font-size: 14px;}
+.songs{width: 59%;height: 50px;}
+.songs p{width: 30%;text-align: left;position: relative;left: 50px;color: #fff}
+.singer{width: 20%;height: 50px;}
+.times{width: 20%;height: 50px;position: relative;}
+.operate{display: none;width: 45%;float:right}
+.songs_list li:hover .operate{display: block;}
+.songs_list li .songs p{float: left;}
+.songs_list li .songs .operate div{width:35px;height: 35px;border-radius: 50%;float: left;margin-top: 5px;margin-right: 4.4%;}
+.songs_list li .songs .operate .play{background:url(../img/icon_list_menu_01.png) center no-repeat;background-size: 100% 100%;}
+.songs_list li .songs .operate .add{background:url(../img/icon_list_menu_17.png) center no-repeat;background-size: 100% 100%;}
+.songs_list li .songs .operate .down{background:url(../img/icon_list_menu_25.png) center no-repeat;background-size: 100% 100%;}
+.songs_list li .songs .operate .relay{background:url(../img/icon_list_menu_09.png) center no-repeat;background-size: 100% 100%;}
+.songs_list li .songs .operate .play:hover{background:url(../img/icon_list_menu_03.png)center no-repeat;background-size: 100% 100%;}
+.songs_list li .songs .operate .add:hover{background:url(../img/icon_list_menu_19.png)center no-repeat;background-size: 100% 100%;}
+.songs_list li .songs .operate .down:hover{background:url(../img/icon_list_menu_27.png)center no-repeat;background-size: 100% 100%;}
+.songs_list li .songs .operate .relay:hover{background:url(../img/icon_list_menu_11.png)center no-repeat;background-size: 100% 100%;}
+.times div{width: 35px;height: 35px;float: left;position:absolute;left: 71px;}
+.songs_list li .times .delopen{border-radius:50%;background:url(../img/icon_list_menu_33.png) center no-repeat;background-size: 100% 100%;display: none;margin-top: 5px}
+.songs_list li .times .delopen:hover{background:url(../img/icon_list_menu_35.png) center no-repeat;background-size: 100% 100%;}
+.songs_list li:hover .timeshidden{display: none;}
+.songs_list li:hover .delopen{display:block;}
+
+/*歌词部分*/
+.songsword{width:25%;height:400px;position:absolute;right: 0;z-index:10;top:65px;right: 50px;}
+.lyrics{width: 70%;height: 400px;margin:0 auto;}
+.songs_pic{width:100%;height: 200px;background: url(../img/album_cover_player.png) center no-repeat;background-size:100% 100%;float: left;}
+.songs_pic img{display:inline-block;width:200px;height: 200px;position:relative;left: -15px;}
+.lyrics div{color: #999;font-size:14px;line-height: 30px;}
+.scroll{width: 100%;height: 110px;overflow: hidden;}
+.scroll_box{position: relative;top:0px;animation:songstop 312s infinite linear;}
+#scroll_box p{color: #f2f2f2}
+
+/*播放部分*/
+.playsongs{width: 100%;height: 120px;position: absolute;bottom:0;}
+.play_btn{width:20%;height:30px;position: relative;top: 30px;left: 50px;}
+.up,#played,.playdown{float: left;margin-left: 20%;opacity: 0.8;cursor: pointer;}
+.up:hover,#played:hover,.playdown:hover{opacity: 1}
+.up{width:25px;height: 25px;background: url(../img/player_04.png) center no-repeat;background-size: 100% 100%;}
+#played{width: 28px;height: 28px;background-size: 100% 100%}
+.playdown{width: 25px;height: 25px;background: url(../img/player_06.png) center no-repeat;background-size: 100% 100% }
+.played{background: url(../img/player_01.png) center no-repeat;}
+.stop{background: url(../img/player_02.png) center no-repeat;}
+
+.timesline{width: 40%;height:40px;position:absolute;top: 20px;left:25%;color: #fff;font-size: 14px;}
+.songsnameandsinger{float: left;}
+.songstime{float: right;}
+.schedule{width:100%;height: 2px;background: #666;float: left;margin-top: 10px;}
+.actionpoint{position:absolute;left:0%;top: 25px;-moz-animation:toward 313s infinite linear;}
+.whiteline{width: 0%;height: 2px;background: #fff;-moz-animation:cdlength 313s infinite linear;}
+/*重复播放*/
+.restartpoint{position:absolute;left:0%;top: 25px;-moz-animation:towardl 313s infinite linear;}
+.restartline{width: 0%;height: 2px;background: #fff;-moz-animation:cdlengthl 313s infinite linear;}
+.restartscroll{position: relative;top:0px;animation:songstopl 312s infinite linear;}
+
+.running{-moz-animation-play-state:running}
+.pause{-moz-animation-play-state:paused;}
+@-moz-keyframes toward{0%{left: 0%;}100%{left: 100%;}}
+@-webkit-keyframes toward{0%{left: 0%;}100%{left: 100%;}}
+@-o-keyframes toward{0%{left: 0%;}100%{left: 100%;}}
+
+@-moz-keyframes towardl{0%{left: 0%;}100%{left: 100%;}}
+@-webkit-keyframes towardl{0%{left: 0%;}100%{left: 100%;}}
+@-o-keyframes towardl{0%{left: 0%;}100%{left: 100%;}}
+
+@-moz-keyframes cdlength{0%{width: 0%;}100%{width: 100%;}}
+@-webkit-keyframes cdlength{0%{width: 0%;}100%{width: 100%;}}
+@-o-keyframes cdlength{0%{width: 0%;}100%{width: 100%;}}
+
+@-moz-keyframes cdlengthl{0%{width: 0%;}100%{width: 100%;}}
+@-webkit-keyframes cdlengthl{0%{width: 0%;}100%{width: 100%;}}
+@-o-keyframes cdlengthl{0%{width: 0%;}100%{width: 100%;}}
+
+@-moz-keyframes songstop{0%{top: 0px;}100%{top:-1650px;}}
+@-o-keyframes songstop{0%{top: 0px;}100%{top:-1650px;}}
+@-webkit-keyframes songstop{0%{top: 0px;}100%{top:-1650px;}}
+
+@-moz-keyframes songstopl{0%{top: 0px;}100%{top:-1650px;}}
+@-o-keyframes songstopl{0%{top: 0px;}100%{top:-1650px;}}
+@-webkit-keyframes songstopl{0%{top: 0px;}100%{top:-1650px;}}
+
+
+/*开关样式*/
+.whilebtn,.loves,.download,.simp,.voice{margin-left: 6%;float: left;opacity: 0.8}
+.whilebtn:hover,.loves:hover,.download:hover,.simp:hover,.voice:hover{opacity:1}
+.switchs{width:30%;height: 50px;position: absolute;right:3%;}
+.whilebtn{width: 30px;height: 24px;background: url(../img/player_21.png) center no-repeat;background-size: 100% 100%;}
+.loves{width:23px;height: 23px;background: url(../img/player_11.png) center no-repeat;background-size: 100% 100%;}
+.download{width:23px;height: 23px;background: url(../img/player_13.png) center no-repeat;background-size: 100% 100%;}
+.simp{width:77px;height: 29px;background: url(../img/player_27.png) center no-repeat;background-size: 100% 100%;}
+.voice{width:27px;height: 23px;background: url(../img/player_15.png) center no-repeat;background-size: 100% 100%;}
+.voiceline{width:80px;height: 2px;background:#666;position: relative;top: 12px;left: 28px;}
+.voice_point{position: relative;left: 100px;bottom:2px;}
+.whitevoiceline{width:80px;height: 2px;background:#fff;position: relative;top: 10px;left: 28px;}
+
+
+
+
+
+

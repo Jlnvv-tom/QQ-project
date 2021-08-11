@@ -1,0 +1,8 @@
+/*公共样式*/
+body,li,h1,h2,h3,h4,h5,h6,p,ul,a{padding: 0;margin: 0;text-decoration:none;list-style: none;
+ color:#666;text-align:center;font-family: "微软雅黑";outline: none;}
+.left{float: left;}
+.right{float: right;}
+.abs{position: absolute;}
+.rel{position: relative;}
+.fix{position: fixed;}
